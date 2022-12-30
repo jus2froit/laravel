@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-
+//requete http user
 Route::get('/users', 'App\Http\Controllers\UtilisateurController@index');
 
 Route::get('/users1', 'App\Http\Controllers\UtilisateurController@ID');
@@ -25,7 +25,7 @@ Route::get('/mail', 'App\Http\Controllers\UtilisateurController@mail');
 
 Route::get('/role', 'App\Http\Controllers\UtilisateurController@role');
 
-
+//requete http book
 Route::get('/book', 'App\Http\Controllers\BookController@index');
 
 Route::get('/book1', 'App\Http\Controllers\BookController@id');
@@ -42,7 +42,7 @@ Route::get('/book_U', 'App\Http\Controllers\BookController@update');
 
 Route::get('/book_D', 'App\Http\Controllers\BookController@delete');
 
-
+//requete http emprunteur
 Route::get('/emprunteurs', 'App\Http\Controllers\EmprunteurController@index');
 
 Route::get('/emprunteurs3', 'App\Http\Controllers\EmprunteurController@ID');
@@ -56,3 +56,20 @@ Route::get('/emprunteurs_tel', 'App\Http\Controllers\EmprunteurController@tel');
 Route::get('/emprunteurs_date', 'App\Http\Controllers\EmprunteurController@date');
 
 Route::get('/emprunteurs_actif', 'App\Http\Controllers\EmprunteurController@actif');
+
+//requete http emprunt
+Route::get('/emprunt', 'App\Http\Controllers\EmpruntController@index');
+
+Route::get('/emprunt_emprunteur2', 'App\Http\Controllers\EmpruntController@emprunteur2');
+
+Route::get('/emprunt_book3', 'App\Http\Controllers\EmpruntController@book3');
+
+Route::get('/emprunt_retour', 'App\Http\Controllers\EmpruntController@date');
+
+Route::get('/emprunt_retour0', 'App\Http\Controllers\EmpruntController@date0');
+
+Route::get('/emprunt_create', 'App\Http\Controllers\EmpruntController@create');
+
+Route::get('/emprunt_update', 'App\Http\Controllers\EmpruntController@update');
+
+Route::get('/emprunt_delete', 'App\Http\Controllers\EmpruntController@delete');

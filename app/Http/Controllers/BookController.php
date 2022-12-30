@@ -45,7 +45,7 @@ class BookController extends Controller
         $book->nombres_pages = 300;
         $book->code_ibsn = 9790412882714;
         $book->auteurs_id = 2;
-        // $book->genres_id = 6;
+        $book->genres_id = 6;
         $book->save();
         dd($book);
     }
